@@ -1,0 +1,7 @@
+print ("Please enter a number:")
+x = int(input())
+print("What are the divisors of x?")
+divisor = range(1,17) 
+for y in divisor: 
+    if x % y == 0:
+         print(y)
