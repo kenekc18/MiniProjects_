@@ -1,0 +1,49 @@
+from tkinter import *
+
+def save_Nam():
+    username = Namvar_1.get()
+    Namvar_2.set("Hello " + username)
+
+def save_Pass():
+     Pasword = Passvar_1.get()
+     Passvar_2.set("Your password is " + Pasword)
+
+def function_01():
+    save_Nam()
+    save_Pass()
+
+win = Tk()
+win.geometry("300x200")
+win.title("Login System")
+
+
+Namvar_1 = StringVar()
+Namvar_2 = StringVar()
+
+Passvar_1 = StringVar()
+Passvar_2 = StringVar()
+
+Name = Label(win, text="Name:")
+Name.grid(row=0, column=0)
+
+Nameentry = Entry(win, textvariable= Namvar_1)
+Nameentry.grid(row=0, column=1)
+
+S_button = Button(win, text="Save", bg="white", command=function_01)
+S_button.grid(row=2, columnspan=2)
+
+Output_N = Label(win, textvariable= Namvar_2)
+Output_N.grid(row=3, column=0)
+
+# Password_Script
+Password = Label(win, text="Password:")
+Password.grid(row=1,column=0)
+
+Passentry = Entry(win, textvariable= Passvar_1)
+Passentry.grid(row=1, column=1)
+
+Output_P = Label(win, textvariable= Passvar_2)
+Output_P.grid(row=4, column=0)
+
+win.mainloop()
+
